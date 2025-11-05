@@ -1,31 +1,31 @@
 # lumi-cli
-A CLI for managing lumi/lumina services
+
+A CLI for managing **lumi/lumina** services
 
 ## Setup
-lumi-cli requires authentication credentials to operate. Create them using:
+
+`lumi-cli` requires authentication credentials to operate.
+You can create them interactively with:
+
 ```bash
 lumi-cli config init
 ```
-Alternatively, manually create the configuration files:
-- `~/.lumi-config/config.toml`
-- `~/.lumi-config/credentials.toml`
 
-### Example config.toml
+Or manually create the configuration file `~/.lumi-config/config.toml`
+
+### Example `config.toml`
+
 ```toml
 [default]
-endpoint = "http://localhost:8000" #change this to your lumi instance
-output = "xml" # xml | json
+endpoint = "http://localhost:8000" # Replace with your Lumi instance URL
+output = "xml"                     # Options: xml | json
 verify_ssl = false
-```
-
-### Example credentials.toml
-```toml
-[default]
-access_key_id = "lumiserver"
+access_key = "lumiserver"
 secret_access_key = "lumiserver"
 ```
 
 ## Usage
+
 ```bash
 # List buckets
 lumi-cli ls

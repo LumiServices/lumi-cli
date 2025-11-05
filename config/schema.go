@@ -8,9 +8,6 @@ type Profile struct {
 	Endpoint  string `toml:"endpoint"`
 	Output    string `toml:"output"` // xml | json
 	VerifySSL bool   `toml:"verify_ssl"`
-}
-
-type Credentials struct {
 	AccessKey string `toml:"access_key"`
-	SecretKey string `toml:"secret_key"`
+	SecretKey string `toml:"secret_access_key"`
 }
